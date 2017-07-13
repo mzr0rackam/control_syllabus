@@ -51,3 +51,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 //    */
 // });
 Route::resource('docentes', 'DocenteController');
+
+Route::resource('cursos', 'CursoController');
