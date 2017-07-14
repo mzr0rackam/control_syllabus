@@ -35,8 +35,12 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#">Escuela de Ingeniería Industrial</a></li>
-          <li><a href="#">Escuela de Ingeniería de Sistemas</a></li>
+          <li>
+            <a href="{{ url('escuela/industrial') }}">Ingeniería Industrial</a>
+          </li>
+          <li>
+            <a href="{{ url('escuela/sistemas') }}">Ingeniería de Sistemas</a>
+          </li>
         </ul>
       </li>
       <li>
@@ -49,6 +53,12 @@
         <a href="#">
           <i class='fa fa-files-o'></i>
           <span>Syllabus</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ url('cursos') }}">
+          <i class='fa fa-bookmark'></i>
+          <span>Cursos</span>
         </a>
       </li>
       <li>

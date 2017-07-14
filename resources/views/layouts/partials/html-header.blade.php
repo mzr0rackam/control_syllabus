@@ -11,6 +11,9 @@
   @if (Request::is('login'))
     <link href="{{ asset('/css/customize/login.css') }}" rel="stylesheet" type="text/css" />
   @endif
+  @if (Request::is('cursos'))
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/dataTables.bootstrap.css') }}">
+  @endif
 
   <script>
     //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs

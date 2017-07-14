@@ -44,12 +44,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
 });
 
-// Route::group(['prefix'=>'docente'], function() {
-//   /*
-//    * Docentes Routes
-//    *
-//    */
-// });
+
 Route::resource('docentes', 'DocenteController');
 
 Route::resource('cursos', 'CursoController');
+
+
+
+Route::group(['prefix'=>'escuela'], function() {
+  
+  Route::resource('sistemas', 'EscuelaSistemasController');
+
+});

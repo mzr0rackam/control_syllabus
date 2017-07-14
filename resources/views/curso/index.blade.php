@@ -13,9 +13,12 @@
 
   <div class="box">
     <div class="box-body">
-      <a class="btn btn-small btn-success" href="{{ url('cursos/create') }}">Agregar nuevo Curso</a>
+      <a class="btn btn-small btn-success" href="{{ url('cursos/create') }}">
+        <i class='fa fa-plus'></i>
+        Agregar nuevo Curso
+      </a>
       @if($cursos)
-      <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+      <table id="data-table-curso" class="table table-bordered table-hover" width="100%" cellspacing="0">
         <thead>
           <tr>
             <td>Código</td>
@@ -23,6 +26,7 @@
             <td>Nombre de Curso</td>
             <td>Créditos de Curso</td>
             <td>Estado de Curso</td>
+            <td>Ciclo</td>
             <td>Acciones</td>
           </tr>
         </thead>
@@ -34,9 +38,13 @@
             <td>{{ $curso->nombre_curso }}</td>
             <td>{{ $curso->creditos_curso }}</td>
             <td>{{ $curso->estado_curso }}</td>
+            <td>{{ $curso->ciclo_curso }}</td>
             <td>
-              <a class="btn btn-small btn-info" href="{{ url('cursos/' . $curso->id . '/edit') }}">Editar</a>
-              {{ Form::open(['url' => 'cursos/' . $curso->id, 'class' => 'pull-right']) }}
+              <a class="btn btn-small btn-info" href="{{ url('cursos/' . $curso->codigo_curso . '/edit') }}">
+                <i class='fa fa-pencil'></i>
+                Editar
+              </a>
+              {{ Form::open(['url' => 'cursos/' . $curso->codigo_curso, 'class' => 'pull-right']) }}
                 {{ Form::hidden('_method', 'DELETE') }}
                 {{ Form::submit('Eliminar', ['class' => 'btn btn-small btn-danger']) }}
               {{ Form::close() }}
