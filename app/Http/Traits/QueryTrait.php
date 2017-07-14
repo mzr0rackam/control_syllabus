@@ -8,7 +8,7 @@ trait QueryTrait
 {
   public function filterAlumnosCursoByCiclo($ciclo)
   {
-    $creditos_curso = DB::table('cursos')->get();
-    var_dump($creditos_curso);
+    $creditos_curso = DB::select('SELECT nombre_curso, creditos_curso FROM cursos');
+    return $creditos_curso;
   }
 }

@@ -94,6 +94,7 @@ class EscuelaSistemasController extends Controller
   { 
     //$alumnos_matriculados = MatriculaCursos::all();
     $alumnosByCurso = $this->filterAlumnosCursoByCiclo($ciclo);
+    var_dump($alumnosByCurso);
     //SELECT c.nombre_curso, c.ciclo_curso FROM matricula_cursos as mc JOIN cursos as c ON mc.codigo_curso = c.codigo_curso WHERE c.ciclo_curso=10
   }
 }
