@@ -27,9 +27,9 @@
         <tbody>
         @foreach($docentes as $index => $docente)
           <tr>
-            <td>{{ $docente->id }}</td>
-            <td>{{ $docente->name }}</td>
-            <td>{{ $docente->email }}</td>
+            <td>{{ $docente->codigo_docente }}</td>
+            <td>{{ $docente->nombre_docente }}</td>
+            <td>{{ $docente->correo_docente }}</td>
             <td>
               <a class="btn btn-small btn-info" href="{{ url('docentes/' . $docente->id . '/edit') }}">Editar</a>
               {{ Form::open(['url' => 'docentes/' . $docente->id, 'class' => 'pull-right']) }}

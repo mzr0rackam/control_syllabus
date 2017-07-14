@@ -10,22 +10,29 @@
 
 
 @section('main-content')
-
   <div class="box">
     <div class="box-body">
-      <a class="btn btn-small btn-success" href="{{ url('cursos/create') }}">
-        <i class='fa fa-plus'></i>
-        Agregar nuevo Curso
-      </a>
+      <div class="row">
+        <div class="col-sm-12">
+          <a class="btn btn-small btn-success" href="{{ url('cursos/create') }}">
+            <i class='fa fa-plus'></i>
+            Agregar nuevo Curso
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-body">
       @if($cursos)
       <table id="data-table-curso" class="table table-bordered table-hover" width="100%" cellspacing="0">
         <thead>
           <tr>
             <td>Código</td>
-            <td>Número de Curso</td>
-            <td>Nombre de Curso</td>
-            <td>Créditos de Curso</td>
-            <td>Estado de Curso</td>
+            <td>Número</td>
+            <td>Nombre</td>
+            <td>Créditos</td>
+            <td>Estado</td>
             <td>Ciclo</td>
             <td>Acciones</td>
           </tr>
@@ -54,7 +61,7 @@
         </tbody>
       </table>
       @else
-        <h4>No hay Usuarios por mostrar</h4>
+        <h4>No hay Cursos por mostrar</h4>
       @endif
     </div>
   </div>

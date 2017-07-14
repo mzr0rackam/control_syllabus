@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Role;
+use App\User as User;
+use App\Role as Role;
+use App\Docente as Docente;
 
 
 class DocenteController extends Controller
@@ -16,7 +17,7 @@ class DocenteController extends Controller
      */
     public function index()
     { 
-      $docentes = [];
+      $docentes = Docente::all();
       return view('docente.index',compact('docentes'));
     }
 

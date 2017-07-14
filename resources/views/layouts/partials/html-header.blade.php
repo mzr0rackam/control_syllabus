@@ -7,12 +7,13 @@
 
   <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
   <link href="{{ asset('/css/customize/main-header.css') }}" rel="stylesheet" type="text/css" />
-  <link href="{{ asset('/css/customize/footer.css') }}" rel="stylesheet" type="text/css" />
-  @if (Request::is('login'))
-    <link href="{{ asset('/css/customize/login.css') }}" rel="stylesheet" type="text/css" />
-  @endif
+  <link href="{{ asset('/css/customize/main-footer.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ asset('/css/customize/custom-data-table.css') }}" rel="stylesheet" type="text/css" />
   @if (Request::is('cursos'))
     <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/dataTables.bootstrap.css') }}">
+  @endif
+  @if (Request::is('login'))
+    <link href="{{ asset('/css/customize/login.css') }}" rel="stylesheet" type="text/css" />
   @endif
 
   <script>

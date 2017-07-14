@@ -9,6 +9,9 @@ https://github.com/Zizaco/entrust
 https://github.com/acoustep/entrust-gui
 https://www.uno-de-piera.com/roles-laravel-5-entrust/
 
+### Material Laravel Collective
+https://laravelista.com/posts/using-forms-in-laravel-5
+
 
 ## 1.Instalar laravel 5.4.*
 laravel new app_name

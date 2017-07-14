@@ -1,4 +1,5 @@
 <!-- Left side column. contains the logo and sidebar -->
+<link rel="stylesheet" href="{{ asset('/css/customize/main-sidebar.css') }}">
 <aside class="main-sidebar">
 
   <!-- sidebar: style can be found in sidebar.less -->
